@@ -5,14 +5,14 @@ var desc = document.querySelector("#description")
 var temp = document.querySelector("#temp")
 var wind = document.querySelector("#wind")
 
-apik="3045dd712ffe6e702e3245525ac7fa38"
+apik="e79d8b1ac8755872444d1be5ab4ef91f"
 
 function convertion(val){
     return (val-273).toFixed(2)
 }
 
 btn.addEventListener('click',function(){
-    fetch('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid'+apik)
+    fetch('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid='+apik)
     .then(res => console.log(res))
     .then(data => {
         var nameval = data['name']
