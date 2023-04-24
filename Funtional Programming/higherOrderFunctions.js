@@ -15,3 +15,19 @@ for(var i=0;i<books.length;i++){
 }
 
 console.log(name1)
+
+//Using Filter
+var name2 = books.filter(function(book){
+    return book.type === "fiction"
+})
+
+console.log(name2)
+
+//Using variables cause in js functions are values
+var isFic = function(book){
+    return book.type === "fiction"
+}
+
+var name3 = books.filter(isFic)
+console.log(name3)
+
